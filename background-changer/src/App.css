@@ -1,0 +1,25 @@
+/* CSS file (App.css) */
+.w-full.h-screen {
+    position: relative;
+    transition: background-color 0.8s ease;
+  }
+  
+  .color-transition {
+    animation: colorChangeAnimation 1s ease forwards;
+  }
+  
+  /* Keyframes for circular expansion effect */
+  @keyframes colorChangeAnimation {
+    0% {
+      clip-path: circle(0% at var(--x, 50%) var(--y, 50%));
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      clip-path: circle(150% at var(--x, 50%) var(--y, 50%));
+      opacity: 1;
+    }
+  }
+  
